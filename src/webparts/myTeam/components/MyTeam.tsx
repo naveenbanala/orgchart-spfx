@@ -85,6 +85,9 @@ export default class MyTeam extends React.Component<IMyTeamProps, { MyDetails, U
     console.log("[user collection]", AllUsers)
     return (
       <div className={""}>
+        <div>
+          <h3>{this.props.description}</h3>
+        </div>
         {AllUsers && AllUsers.length > 0 && AllUsers.map(user => <LivePersonaCard {...user} context={this.props.context} />)}
       </div>
     );

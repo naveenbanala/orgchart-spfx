@@ -33,6 +33,9 @@ export default class UserDirectory extends React.Component<IUserDirectoryProps, 
     console.log("[user collection]", alluser)
     return (
       <div className={""}>
+        <div>
+          <h3>{this.props.description}</h3>
+        </div>
         {alluser.value && alluser.value.length > 0 && alluser.value.map(user => <LivePersonaCard {...user} context={this.props.context} />)}
       </div>
     );
